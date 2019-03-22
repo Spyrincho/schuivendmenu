@@ -8,26 +8,51 @@
     <meta name="author" content="Patrick Homburg">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="master.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+
+    <style>
+    #menuToggle:checked ~ main {
+        margin-left: 8.15em;
+    }
+
+    nav {
+        position: absolute;
+    }
+
+    main {
+        position: absolute;
+        margin-left: 0;
+        transition: margin-left .5s cubic-bezier(.10,.40,.50,.90);
+    }
+    </style>
+
 
   </head>
   <body>
+    <input autocomplete="off" hidden type="checkbox" name="menuToggle" id="menuToggle">
 
     <nav>
-      <h4>Menu</h4>
-      <ul>
-        <li>
-          <a href="html.html">home</a>
-        </li>
-        <li>
-          <a href="htmlalles.html">About Shrek (alles)</a>
-        </li>
-        <li>
-          <a href="htmlrechts.html">Contact (rechts)</a>
-        </li>
-      </ul>
+        <h4>Menu</h4>
+        <ul>
+            <li>
+                <a class="active" href="htmlinhoudschuift.html">Schuivend Menu</a>
+            </li>
+            <li>
+                <a href="html.html">Normaal</a>
+            </li>
+            <li>
+                <a  href="htmlalles.html">Alles</a>
+            </li>
+            <li>
+                <a href="htmlrechts.html">Rechts</a>
+            </li>
+        </ul>
     </nav>
 
     <main>
+      <label for="menuToggle" id="toggleLabel"></label>
+
       <h1>Shrek</h1>
       <p><img src="shrek.jpg" class="shrek"></p>
       <p>Shrek is an ogre, he features in the movie series "Shrek".</p>
