@@ -1,0 +1,73 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Frontend | een schuivend menu: met pseudoclasses en tilde-selector</title>
+  <meta name="keywords" content="Frontend, HTML, CSS, JS">
+  <meta name="description" content="Gestolen HEAD item van Theo's website"x>
+  <meta name="author" content="Patrick Homburg">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="master.css">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <style>
+   #menuToggle:checked ~ nav {
+       margin-left: 92vw;
+   }
+
+   #toggleLabel {
+       transition: margin-left .5s cubic-bezier(.10,.40,.50,.90);
+   }
+
+   nav {
+       position: absolute;
+       height: 100%;
+       background: #333;
+       border-left: 1px rgb(87, 80, 80) solid;
+       margin-left: 100vw;
+       transition: margin-left .5s cubic-bezier(.10,.40,.50,.90);
+   }
+
+   </style>
+
+</head>
+<body>
+    <input autocomplete="off" hidden type="checkbox" name="menutoggle" id="menutoggle">
+    <nav>
+        <h4>Menu</h4>
+        <ul>
+            <li>
+                <a  href="htmlinhoudschuift.html">Schuivend Menu</a>
+            </li>
+            <li>
+                <a href="html.html">Normaal</a>
+            </li>
+            <li>
+                <a href="htmlalles.html">Alles</a>
+            </li>
+            <li>
+                <a class="active" href="htmlrechts.html">Rechts</a>
+            </li>
+        </ul>
+    </nav>
+
+    <main>
+        <label for="menutoggle" id="togglelabel"></label>
+        <h1>Shrek</h1>
+        <p><img src="shrek.jpg" class="shrek"></p>
+        <p>Shrek is an ogre, he features in the movie series "Shrek".</p>
+        <p>The first movie in the series was released in 2001.</p>
+        <p>Shrek is an American computer-animated comedy film.</p>
+        <p>The series is based on the 1990 fairytale picture book "Of The Same Name" by William Steig.</p>
+
+
+        <a href="http://validator.w3.org/check?uri=referer" target="_blank">
+            <img src="http://blog.boyet.com/blog/files/media/image/valid-html5-blue.png" alt="Valide HTML5"></a>
+          <a href="http://jigsaw.w3.org/css-validator/check/referer" target="_blank">
+            <img src="http://jigsaw.w3.org/css-validator/images/vcss-blue.gif" alt="Valide CSS">
+          </a>
+    </main>
+
+</body>
+</html>
