@@ -12,16 +12,16 @@ html, body {
     overflow-x: hidden;
 }
 
-#toggleLabel {
+#togglelabel {
     font-size: 2em;
     font-weight: 900;
 }
 
-#toggleLabel::after {
+#togglelabel::after {
     content: "\2630";
 }
 
-#menuToggle:checked ~main #toggleLabel::after {
+#menutoggle:checked ~main #toggleLabel::after {
     content: "\2716";
 }
 
@@ -75,10 +75,10 @@ main img {
     max-width: 90vw;
 }
 
-#menuToggle:checked ~ main {
+#menutoggle:checked ~ main {
        margin-left: 7.95em;
    }
-   #menuToggle:checked ~ nav {
+   #menutoggle:checked ~ nav {
        margin-left: 0;
    }
    nav {
