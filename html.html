@@ -8,25 +8,59 @@
     <meta name="author" content="Patrick Homburg">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="master.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <style>
+      #menuToggle:checked ~ nav {
+          margin-left: 0;
+      }
+
+      #toggleLabel {
+          transition: margin-left .5s cubic-bezier(.10,.40,.50,.90);
+      }
+
+      nav {
+          position: absolute;
+          height: 100%;
+          background: #333;
+      }
+
+      nav {
+          position: absolute;
+          margin-left: -9.5em;
+          transition: margin-left .5s cubic-bezier(.10,.40,.50,.90);
+      }
+
+      main img {
+          max-width: 200px;
+      }
+      </style>
+
   </head>
   <body>
+    <input autocomplete="on" hidden type="checkbox" name="menuToggle" id="menuToggle">
 
     <nav>
-      <h4>Menu</h4>
-      <ul>
-        <li>
-          <a href="htmlinhoudschuift.html">Shrek Photos Movie (inhoud)</a>
-        </li>
-        <li>
-          <a href="htmlalles.html">About Shrek (alles)</a>
-        </li>
-        <li>
-          <a href="htmlrechts.html">Contact (rechts)</a>
-        </li>
-      </ul>
+        <h4>Menu</h4>
+        <ul>
+            <li>
+                <a  href="htmlinhoudschuift.html">Schuivend Menu</a>
+            </li>
+            <li>
+                <a class="active" href="html.html">Normaal</a>
+            </li>
+            <li>
+                <a  href="htmlalles.html">Alles</a>
+            </li>
+            <li>
+                <a href="htmlrechts.html">Rechts</a>
+            </li>
+        </ul>
     </nav>
 
     <main>
+      <label for="menuToggle" id="toggleLabel"></label>
+
       <h1>Shrek</h1>
       <p><img src="shrek.jpg" class="shrek"></p>
       <p>Shrek is an ogre, he features in the movie series "Shrek".</p>
@@ -41,7 +75,8 @@
 
     </main>
 
-
-    <script rel="java.js"></script>
   </body>
+
+    <script src="java.js"></script>
+
 </html>
