@@ -1,10 +1,9 @@
-let menuKnop = document.getElementById('menuToggle');
-let menuLabel = document.getElementById('toggleLabel');
+let menuKnop = document.getElementById('menutoggle');
+let menuLabel = document.getElementById('togglelabel');
 let moved = false;
 console.log(moved);
 
-
-function moveLabel() {
+function movelabel() {
     if (moved == false) {
         console.log(moved);
         menuLabel.style.marginLeft = "3.5em";
@@ -16,4 +15,4 @@ function moveLabel() {
     }
 }
 
-menuLabel.addEventListener('click', moveLabel);
+menulabel.addEventListener('click', movelabel);
