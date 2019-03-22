@@ -1,0 +1,97 @@
+
+.shrek{
+  max-width: 400px;
+  max-height: 400px;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    background-color: #288B0D;
+
+    overflow-x: hidden;
+}
+
+#toggleLabel {
+    font-size: 2em;
+    font-weight: 900;
+}
+
+#toggleLabel::after {
+    content: "\2630";
+}
+
+#menuToggle:checked ~main #toggleLabel::after {
+    content: "\2716";
+}
+
+nav {
+    color: #ddd;
+}
+
+nav h4 {
+    text-align: center;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+nav li {
+    border-bottom: 1px solid white;
+}
+
+nav a {
+    color: #ddd;
+    text-decoration: none;
+    display: block;
+    padding: 1em;
+    background: #333;
+    cursor: pointer;
+    transition: background .5s ease-out;
+}
+
+nav a:hover:not(.active) {
+    background: #000;
+    color: #fff;
+}
+
+.active {
+    background: rgb(50, 192, 37);
+    border: solid 2px rgb(35, 240, 120);
+}
+
+main {
+    background: #288B0D;
+    box-sizing: border-box;
+    padding: 2em;
+    width: 100vw;
+    min-height: 100vh;
+}
+
+main img {
+    max-width: 90vw;
+}
+
+#menuToggle:checked ~ main {
+       margin-left: 7.95em;
+   }
+   #menuToggle:checked ~ nav {
+       margin-left: 0;
+   }
+   nav {
+       position: absolute;
+       height: 100%;
+       background: #333;
+   }
+   nav {
+       position: absolute;
+       margin-left: -8em;
+       transition: margin-left .5s cubic-bezier(.08,.35,.52,.99);
+   }
+   main {
+       margin-left: 0;
+       transition: margin-left .5s cubic-bezier(.08,.35,.52,.99);
+   }
