@@ -4,45 +4,80 @@
     <meta charset="utf-8">
     <title>Frontend | een schuivend menu: met pseudoclasses en tilde-selector</title>
     <meta name="keywords" content="Frontend, HTML, CSS, JS">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="Gestolen HEAD item van Theo's website"x>
     <meta name="author" content="Patrick Homburg">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="master.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <style>
+        #menuToggle:checked ~ main {
+            margin-left: 7.95em;
+        }
+
+        #menuToggle:checked ~ nav {
+            margin-left: 0;
+        }
+
+        nav {
+            position: absolute;
+            height: 100%;
+            background: #333;
+        }
+
+        nav {
+            position: absolute;
+            margin-left: -9.5em;
+            transition: margin-left .5s cubic-bezier(.10,.40,.50,.90);
+        }
+
+        main {
+            margin-left: 0;
+            transition: margin-left .5s cubic-bezier(.10,.40,.50,.90);
+        }
 
 
+        </style>
 
   </head>
   <body>
+      <input autocomplete="off" hidden type="checkbox" name="menuToggle" id="menuToggle">
+      <nav>
+          <h4>Menu</h4>
+          <ul>
+              <li>
+                  <a  href="htmlinhoudschuift.html">Schuivend Menu</a>
+              </li>
+              <li>
+                  <a href="html.html">Normaal</a>
+              </li>
+              <li>
+                  <a class="active" href="htmlalles.html">Alles</a>
+              </li>
+              <li>
+                  <a href="htmlrechts.html">Rechts</a>
+              </li>
+          </ul>
+      </nav>
 
-    <nav>
-      <h4>Menu</h4>
-      <ul>
-        <li>
-          <a href="htmlinhoudschuift.html">Shrek Photos Movie (inhoud)</a>
-        </li>
-        <li>
-            <a href="htmlrechts.html">Contact (rechts)</a>
-        </li>
-        <li>
-          <a href="html.html">Home</a>
-        </li>
-      </ul>
-    </nav>
+      <main>
+        <label for="menuToggle" id="toggleLabel"></label>
+        <h1>Shrek</h1>
+        <p><img src="shrek.jpg" class="shrek"></p>
+        <p>Shrek is an ogre, he features in the movie series "Shrek".</p>
+        <p>The first movie in the series was released in 2001.</p>
+        <p>Shrek is an American computer-animated comedy film.</p>
+        <p>The series is based on the 1990 fairytale picture book "Of The Same Name" by William Steig.</p>
 
-    <main>
-      <h1>Shrek</h1>
-      <p><img src="shrek.jpg" class="shrek"></p>
-      <p>Shrek is an ogre, he features in the movie series "Shrek".</p>
-      <p>The first movie in the series was released in 2001.</p>
-      <p>Shrek is an American computer-animated comedy film.</p>
-      <p>The series is based on the 1990 fairytale picture book "Of The Same Name" by William Steig.</p>
+    <a href="http://validator.w3.org/check?uri=referer" target="_blank">
+      <img src="http://blog.boyet.com/blog/files/media/image/valid-html5-blue.png" alt="Valide HTML5"></a>
+    <a href="http://jigsaw.w3.org/css-validator/check/referer" target="_blank">
+      <img src="http://jigsaw.w3.org/css-validator/images/vcss-blue.gif" alt="Valide CSS">
+    </a>
+      </main>
 
-      <a href="http://validator.w3.org/check?uri=referer" target="_blank">
-    <img src="http://blog.boyet.com/blog/files/media/image/valid-html5-blue.png" alt="Valide HTML5"></a>
-  <a href="http://jigsaw.w3.org/css-validator/check/referer" target="_blank">
-    <img src="http://jigsaw.w3.org/css-validator/images/vcss-blue.gif" alt="Valide CSS">
 
-    </main>
 
   </body>
 </html>
